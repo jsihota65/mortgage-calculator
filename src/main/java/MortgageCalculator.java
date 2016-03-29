@@ -41,22 +41,14 @@ public class MortgageCalculator {
 		System.out.println("Monthly Payment: " + monthlyPayments);
 		System.out.println("Term in Years and months: " + termInYears + " years and " + months + " months");
 		
+		System.out.println("Would you like to calculate for another property? Enter 'y' or 'n': ");
+		String answer = scanner.nextLine();
+		askForAnotherProperty(answer);
+		
 	}
 	
-	public static void main(String[] args) {
+	public static void askForAnotherProperty(String answer){
 		
-		//Greet the user		
-		System.out.println("Thank you for visiting the Mortgage Calculator\n");
-		
-		getPropertyInfo();
-		calculatePayment();
-		displayCalculations();
-		
-		//ask user if they would like to calculate for another property.
-		
-		System.out.println("Would you like to calculate the mortgage for another property? Enter 'y' for yes or 'n' to quit: ");
-		String answer = scanner.nextLine();
-	
 		while(answer.equalsIgnoreCase("y")){
 
 			getPropertyInfo();
@@ -68,7 +60,18 @@ public class MortgageCalculator {
 		}
 		
 		System.out.println("Thank you for using the Mortgage Calculator. Have a nice day!");
-			
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		//Greet the user		
+		System.out.println("Thank you for visiting the Mortgage Calculator\n");
+		
+		getPropertyInfo();
+		calculatePayment();
+		displayCalculations();
 		
 		
 	}
