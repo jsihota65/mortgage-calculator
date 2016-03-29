@@ -43,9 +43,6 @@ public class MortgageCalculator {
 		
 	}
 	
-	public static void askUserForAnotherProperty(){
-		
-	}
 	public static void main(String[] args) {
 		
 		//Greet the user		
